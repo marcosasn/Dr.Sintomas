@@ -9,6 +9,8 @@ Marcos Antônio Silva Nascimento (Product Owner)<br>
 Wesley Brenno (Stakeholder)<br>
 
 ## History
+Project developed as course completion requirement Software Entrepreneurship.
 
 ## Credits
+Taxpayers and the teacher Higo.
 </snippet>
