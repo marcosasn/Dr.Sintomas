@@ -1,5 +1,5 @@
 <snippet>
-## Dr.Sintomas
+## Dr.Symptons
 People need information about diseases, but do not have easy to find. Every day, people need rapid diagnosis of diseases through symptoms, in some cases this need is met by access to a few precise search engines and reliable. In this case, the applicant seeks a very difficult form of information, because it does not have a specific place to find information that may be interesting. In one sentence: an application that can identify the disease through symptoms.
 Project software entrepreneurship 2015.2
 
