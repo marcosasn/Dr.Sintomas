@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">SymptomsMe</string>
+    <string name="app_name">Dr.Sintomas</string>
+    <string name="hint_symptom">pesquisar sintomas</string>
+    <string name="list_option_search_title">Categoria médica</string>
+    <string name="list_symptom_title">Sintomas</string>
+    <string name="go_to_hospital_button_title">Ir para o hospital</string>
     <string name="action_settings">Settings</string>
 </resources>
