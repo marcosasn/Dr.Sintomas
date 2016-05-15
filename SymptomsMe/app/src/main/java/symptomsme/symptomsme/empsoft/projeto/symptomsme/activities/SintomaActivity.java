@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -30,14 +31,14 @@ public class SintomaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-
         setContentView(R.layout.activity_sintoma);
 
         mDb = new DataBaseStorage(getApplicationContext());
 
-        DBSPopulater populater = new DBSPopulater(getApplicationContext());
-        populater.populateBD();
-
+        if(mDb.getAllDoencas().size() == 0){
+            DBSPopulater populater = new DBSPopulater(getApplicationContext());
+            populater.populateBD();
+        }
         final EditText etSintomas = (EditText) findViewById(R.id.et_sintoma);
 
         ImageButton btPesquisar = (ImageButton) findViewById(R.id.bt_pesquisar);
@@ -45,13 +46,21 @@ public class SintomaActivity extends AppCompatActivity {
         btPesquisar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String[] sintomas = (etSintomas.getText().toString()).split(",");
-                ArrayList<Doenca> doencas = mDb.getDoencasBySintomas(sintomas);
 
-                Intent i = new Intent(getApplicationContext(), DoencasActivity.class);
-                i.putExtra("doencas",doencas);
+                if(etSintomas.getText().toString().trim().equals("")){
+                    Toast.makeText(getApplicationContext(),"Digite algum sintoma",Toast.LENGTH_LONG).show();
+                }
 
-                startActivity(i);
+                else{
+
+                    String[] sintomas = (etSintomas.getText().toString()).split(",");
+                    ArrayList<Doenca> doencas = mDb.getDoencasBySintomas(sintomas);
+
+                    Intent i = new Intent(getApplicationContext(), DoencasActivity.class);
+                    i.putExtra("doencas",doencas);
+
+                    startActivity(i);
+                }
             }
         });
 

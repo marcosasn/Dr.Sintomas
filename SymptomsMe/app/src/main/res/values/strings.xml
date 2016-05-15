@@ -1,10 +1,15 @@
 <resources>
     <string name="app_name">Dr.Sintomas</string>
-    <string name="hint_symptom">Separe os sintomas por vírgula</string>
+    <string name="hint_symptom">Separados por vírgula</string>
     <string name="informesintomas">Informe seus sintomas</string>
     <string name="list_option_search_title">Categoria médica</string>
     <string name="list_symptom_title">Sintomas</string>
-    <string name="go_to_hospital_button_title">Ir para o hospital</string>
+    <string name="button_médicos">Ver médicos</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_doencas">Doenças</string>
+
+    ------------ Tela Diagnostico -------------
+    <string name="causas">Causas:</string>
+    <string name="sintomas">Sintomas:</string>
+    <string name="prevencoes">Prevenções:</string>
 </resources>
