@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".SintomaActivity"
+    tools:context=".activities.SintomaActivity"
     android:background="@color/colorAccent">
 
     <android.support.design.widget.AppBarLayout
@@ -45,6 +45,17 @@
             android:paddingRight="20dp"
             android:weightSum="1">
 
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/informesintomas"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/textView2"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal" />
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -79,7 +90,7 @@
                 android:text="@string/list_option_search_title"
                 android:textColor="@color/colorPrimary"
                 android:textAlignment="center"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:layout_weight="2.08" />
 
             <Spinner
