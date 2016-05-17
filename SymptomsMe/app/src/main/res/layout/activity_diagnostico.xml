@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:parentActivityName=".activities.SintomaActivity">
+    android:parentActivityName=".activities.SintomaActivity"
+    android:background="@color/colorAccent">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
@@ -64,7 +65,7 @@
                 android:autoLink="phone|email|web"
                 android:linksClickable="true"
                 android:paddingTop="30dp"
-                android:textSize="35sp"
+                android:textSize="20sp"
                 android:text="@string/causas"
                 android:textColor="@color/colorPrimary" />
 
@@ -87,7 +88,7 @@
                 android:autoLink="phone|email|web"
                 android:linksClickable="true"
                 android:paddingTop="30dp"
-                android:textSize="35sp"
+                android:textSize="20sp"
                 android:text="@string/sintomas"
                 android:textColor="@color/colorPrimary" />
 
@@ -109,7 +110,7 @@
                 android:autoLink="phone|email|web"
                 android:linksClickable="true"
                 android:paddingTop="30dp"
-                android:textSize="35sp"
+                android:textSize="20sp"
                 android:text="@string/prevencoes"
                 android:textColor="@color/colorPrimary" />
 
@@ -128,9 +129,12 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Button"
-                android:id="@+id/button"
-                android:layout_gravity="center_horizontal" />
+                android:text="@string/button_médicos"
+                android:id="@+id/button_medicos"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:textAllCaps="false"/>
 
         </LinearLayout>
     </ScrollView>

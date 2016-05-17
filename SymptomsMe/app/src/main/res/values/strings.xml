@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">Dr.Sintomas</string>
+
+    ------------ Tela Sintomas -------------
     <string name="hint_symptom">Separados por vírgula</string>
     <string name="informesintomas">Informe seus sintomas</string>
     <string name="list_option_search_title">Categoria médica</string>
+
     <string name="list_symptom_title">Sintomas</string>
     <string name="button_médicos">Ver médicos</string>
     <string name="action_settings">Settings</string>

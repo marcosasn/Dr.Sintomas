@@ -58,11 +58,12 @@
 
                 <ImageButton
                     android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_height="70dp"
                     android:id="@+id/bt_pesquisar"
                     android:layout_alignBottom="@+id/et_sintoma"
                     android:layout_alignParentEnd="true"
-                    android:src="@mipmap/lupa"/>
+                    android:src="@mipmap/lupa"
+                    android:background="@color/white"/>
 
             </RelativeLayout>
 
@@ -82,7 +83,8 @@
                 android:id="@+id/spinner_doutores"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1.33" />
+                android:layout_weight="1.33"
+                android:background="@color/white"/>
 
         </LinearLayout>
 

@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -21,11 +21,13 @@
         <activity
             android:name=".activities.DiagnosticoActivity"
             android:label="@string/app_name"
+            android:icon="@mipmap/icon"
             android:parentActivityName=".activities.SintomaActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".activities.DoencasActivity"
             android:label="@string/title_activity_doencas"
+            android:icon="@mipmap/icon"
             android:parentActivityName=".activities.SintomaActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

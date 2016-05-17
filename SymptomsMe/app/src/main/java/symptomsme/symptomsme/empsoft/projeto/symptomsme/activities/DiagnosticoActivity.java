@@ -1,17 +1,27 @@
 package symptomsme.symptomsme.empsoft.projeto.symptomsme.activities;
 
+        import android.content.Intent;
         import android.os.Bundle;
         import android.support.v7.app.AppCompatActivity;
         import android.support.v7.widget.Toolbar;
         import android.view.Menu;
         import android.view.MenuItem;
+        import android.view.View;
         import android.view.Window;
+        import android.widget.Button;
         import android.widget.TextView;
 
+        import java.util.ArrayList;
+
         import symptomsme.symptomsme.empsoft.projeto.symptomsme.R;
+        import symptomsme.symptomsme.empsoft.projeto.symptomsme.database.DBSPopulater;
+        import symptomsme.symptomsme.empsoft.projeto.symptomsme.database.DataBaseStorage;
         import symptomsme.symptomsme.empsoft.projeto.symptomsme.entities.Doenca;
+        import symptomsme.symptomsme.empsoft.projeto.symptomsme.entities.Medico;
 
 public class DiagnosticoActivity extends AppCompatActivity {
+
+    private DataBaseStorage mDb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +31,15 @@ public class DiagnosticoActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_diagnostico);
 
+        mDb = new DataBaseStorage(getApplicationContext());
+
+        if(mDb.getAllDoencas().size() == 0){
+            DBSPopulater populater = new DBSPopulater(getApplicationContext());
+            populater.populateBD();
+        }
 
         Doenca doenca = (Doenca) getIntent().getExtras().getSerializable("doenca");
+        final String especialidade = doenca.getEspecialista();
 
         final Toolbar toolbar = (Toolbar) findViewById(R.id.Mytoolbar);
         setSupportActionBar(toolbar);
@@ -37,6 +54,20 @@ public class DiagnosticoActivity extends AppCompatActivity {
         causasTv.setText(doenca.getCausas());
 
         String[] sintomas = doenca.getSintomas().split(",");
+
+        Button verMedicosBt = (Button) findViewById(R.id.button_medicos);
+
+        verMedicosBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArrayList<Medico> medicos = mDb.getMedicoByEspecialidade(especialidade);
+
+                Intent i = new Intent(getApplicationContext(), MedicosActivity.class);
+                i.putExtra("medicos",medicos);
+
+                startActivity(i);
+            }
+        });
 
         String sintomasFormatted = "";
 
