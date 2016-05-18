@@ -33,10 +33,10 @@ public class DiagnosticoActivity extends AppCompatActivity {
 
         mDb = new DataBaseStorage(getApplicationContext());
 
-        if(mDb.getAllDoencas().size() == 0){
-            DBSPopulater populater = new DBSPopulater(getApplicationContext());
-            populater.populateBD();
-        }
+//        if(mDb.getAllDoencas().size() == 0){
+//            DBSPopulater populater = new DBSPopulater(getApplicationContext());
+//            populater.populateBD();
+//        }
 
         Doenca doenca = (Doenca) getIntent().getExtras().getSerializable("doenca");
         final String especialidade = doenca.getEspecialista();

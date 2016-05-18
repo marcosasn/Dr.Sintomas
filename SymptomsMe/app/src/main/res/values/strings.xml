@@ -15,4 +15,7 @@
     <string name="causas">Causas:</string>
     <string name="sintomas">Sintomas:</string>
     <string name="prevencoes">Prevenções:</string>
+
+    <string name="title_activity_medicos">Médicos</string>
+
 </resources>

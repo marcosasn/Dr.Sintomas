@@ -1,9 +1,11 @@
 package symptomsme.symptomsme.empsoft.projeto.symptomsme.entities;
 
+import java.io.Serializable;
+
 /**
  * Created by Wesley Brenno on 14/05/2016.
  */
-public class Medico {
+public class Medico implements Serializable {
 
     private long id;
     private String nome;

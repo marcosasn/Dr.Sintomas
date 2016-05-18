@@ -222,7 +222,7 @@ public class DataBaseStorage {
       //  values.put(COLUMN_DOENCA_ID, doenca.getId());
         values.put(COLUMN_DOENCA_NAME, doenca.getName());
         values.put(COLUMN_DOENCA_DESCRIPTION, doenca.getDescription());
-        values.put(COLUMN_DOENCA_SINTOMAS, doenca.getSintomas().toUpperCase());
+        values.put(COLUMN_DOENCA_SINTOMAS, doenca.getSintomas());
         values.put(COLUMN_DOENCA_CAUSAS, doenca.getCausas());
         values.put(COLUMN_DOENCA_PREVENCAO, doenca.getPrevencao());
         values.put(COLUMN_DOENCA_ESPECIALISTA, doenca.getEspecialista());
