@@ -55,13 +55,14 @@ public class DBSPopulater {
         mDb.addDoenca(hepatite);
         mDb.addDoenca(tuberculose);
 
-        Medico medicoJoao = new Medico(1,"João Pedro", "Neuro", "Rua João Pessoa", "9999-0000", "um link ai");
+        String endereco = "Rua Rita de cassia nº 39, Prata, Prédio São Rafael, sala 307";
+        String horarios = "Segunda-feira à Quinta-feira nos horários de 9:00 às 16:00.";
 
+        Medico medicoJoao = new Medico(1,"João Pedro", "Neuro", endereco, horarios, "9999-0000", "um link ai");
 
-        Medico medicoJose = new Medico(1,"José", "Pneumologista", "Rua João Pessoa", "9999-0000", "um link ai");
+        Medico medicoJose = new Medico(1,"José", "Pneumologista", endereco, horarios, "9999-0000", "um link ai");
 
-
-        Medico medicoDouglas = new Medico(1,"Douglas", "Pneumologista", "Rua João Pessoa", "9999-0000", "um link ai");
+        Medico medicoDouglas = new Medico(1,"Douglas", "Pneumologista", endereco, horarios, "9999-0000", "um link ai");
 
         mDb.addMedico(medicoDouglas);
         mDb.addMedico(medicoJoao);

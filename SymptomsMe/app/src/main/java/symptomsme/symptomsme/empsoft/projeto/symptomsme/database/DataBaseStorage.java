@@ -64,6 +64,9 @@ public class DataBaseStorage {
     /** The Constant COLUMN_MEDICO_ENDERECO. */
     public static final String COLUMN_MEDICO_ENDERECO = "MEDICO_ENDERECO";
 
+    /** The Constant COLUMN_MEDICO_HORARIOS. */
+    public static final String COLUMN_MEDICO_HORARIOS = "MEDICO_HORARIOS";
+
     /** The Constant COLUMN_MEDICO_TELEFONE. */
     public static final String COLUMN_MEDICO_TELEFONE = "MEDICO_TELEFONE";
 
@@ -89,6 +92,7 @@ public class DataBaseStorage {
             + " INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,"
             + COLUMN_MEDICO_NAME + " STRING, "
             + COLUMN_MEDICO_ENDERECO + " STRING, "
+            + COLUMN_MEDICO_HORARIOS + " STRING, "
             + COLUMN_MEDICO_TELEFONE + " STRING, "
             + COLUMN_MEDICO_ESPECIALIDADE + " STRING, "
             + COLUMN_MEDICO_MAPS + " STRING);";
@@ -396,6 +400,7 @@ public class DataBaseStorage {
       //  values.put(COLUMN_MEDICO_ID, medico.getId());
         values.put(COLUMN_MEDICO_NAME, medico.getNome());
         values.put(COLUMN_MEDICO_ENDERECO, medico.getEndereco());
+        values.put(COLUMN_MEDICO_HORARIOS, medico.getHorarios());
         values.put(COLUMN_MEDICO_TELEFONE, medico.getTelefone());
         values.put(COLUMN_MEDICO_ESPECIALIDADE, medico.getEspecialidade());
         values.put(COLUMN_MEDICO_MAPS, medico.getMaps());
@@ -417,6 +422,7 @@ public class DataBaseStorage {
         values.put(COLUMN_MEDICO_ID, medico.getId());
         values.put(COLUMN_MEDICO_NAME, medico.getNome());
         values.put(COLUMN_MEDICO_ENDERECO, medico.getEndereco());
+        values.put(COLUMN_MEDICO_HORARIOS, medico.getHorarios());
         values.put(COLUMN_MEDICO_TELEFONE, medico.getTelefone());
         values.put(COLUMN_MEDICO_ESPECIALIDADE, medico.getEspecialidade());
         values.put(COLUMN_MEDICO_MAPS, medico.getMaps());
@@ -430,6 +436,7 @@ public class DataBaseStorage {
 
         final String query = "SELECT " + COLUMN_MEDICO_ID + ", "
                 + COLUMN_MEDICO_NAME + ", " + COLUMN_MEDICO_ENDERECO + ", "
+                + COLUMN_MEDICO_HORARIOS + ", "
                 + COLUMN_MEDICO_TELEFONE + ", "
                 + COLUMN_MEDICO_ESPECIALIDADE + ", " + COLUMN_MEDICO_MAPS
                 +" FROM " + TABLE_MEDICO
@@ -453,6 +460,9 @@ public class DataBaseStorage {
             String endereco = mCursor.getString(mCursor
                     .getColumnIndex(COLUMN_MEDICO_ENDERECO));
 
+            String horarios = mCursor.getString(mCursor
+                    .getColumnIndex(COLUMN_MEDICO_HORARIOS));
+
             String telefone = mCursor.getString(mCursor
                     .getColumnIndex(COLUMN_MEDICO_TELEFONE));
 
@@ -462,7 +472,7 @@ public class DataBaseStorage {
             String maps = mCursor.getString(mCursor
                     .getColumnIndex(COLUMN_MEDICO_MAPS));
 
-            Medico medico = new Medico(id, nome, especialidade, endereco, telefone, maps);
+            Medico medico = new Medico(id, nome, especialidade, endereco, horarios, telefone, maps);
 
             medicos.add(medico);
             mCursor.moveToNext();
@@ -475,6 +485,7 @@ public class DataBaseStorage {
 
         final String query = "SELECT " + COLUMN_MEDICO_ID + ", "
                 + COLUMN_MEDICO_NAME + ", " + COLUMN_MEDICO_ENDERECO + ", "
+                + COLUMN_MEDICO_HORARIOS + ", "
                 + COLUMN_MEDICO_TELEFONE + ", "
                 + COLUMN_MEDICO_ESPECIALIDADE + ", " + COLUMN_MEDICO_MAPS
                 +" FROM " + TABLE_MEDICO + " WHERE '"  +especialidadeBuscada.toUpperCase()  + "' = UPPER(" + COLUMN_MEDICO_ESPECIALIDADE + ")"
@@ -498,6 +509,9 @@ public class DataBaseStorage {
             String endereco = mCursor.getString(mCursor
                     .getColumnIndex(COLUMN_MEDICO_ENDERECO));
 
+            String horarios = mCursor.getString(mCursor
+                    .getColumnIndex(COLUMN_MEDICO_HORARIOS));
+
             String telefone = mCursor.getString(mCursor
                     .getColumnIndex(COLUMN_MEDICO_TELEFONE));
 
@@ -507,7 +521,7 @@ public class DataBaseStorage {
             String maps = mCursor.getString(mCursor
                     .getColumnIndex(COLUMN_MEDICO_MAPS));
 
-            Medico medico = new Medico(id, nome, especialidade, endereco, telefone, maps);
+            Medico medico = new Medico(id, nome, especialidade, endereco, horarios, telefone, maps);
 
             medicos.add(medico);
             mCursor.moveToNext();
@@ -515,4 +529,3 @@ public class DataBaseStorage {
         return medicos;
     }
 }
-

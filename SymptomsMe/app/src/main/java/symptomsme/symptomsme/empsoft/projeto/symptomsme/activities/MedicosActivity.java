@@ -33,7 +33,18 @@ public class MedicosActivity extends AppCompatActivity {
         ArrayList<Medico> medicos = (ArrayList<Medico>) getIntent().getExtras().getSerializable("medicos");
 
         ListView mListMedicos = (ListView) findViewById(R.id.listViewMedicos);
+        final MedicoAdapter medicoAdapter = new MedicoAdapter(this, medicos);
+        mListMedicos.setAdapter(medicoAdapter);
 
-        mListMedicos.setAdapter(new MedicoAdapter(this, medicos));
+        mListMedicos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Medico medico = (Medico) medicoAdapter.getItem(position);
+                Intent i = new Intent(getApplicationContext(), MedicoActivity.class);
+                i.putExtra("medico",medico);
+                startActivity(i);
+            }
+        });
     }
 }

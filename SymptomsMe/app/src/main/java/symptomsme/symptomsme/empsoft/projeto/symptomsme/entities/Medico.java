@@ -11,14 +11,16 @@ public class Medico implements Serializable {
     private String nome;
     private String especialidade;
     private String endereco;
+    private String horarios;
     private String telefone;
     private String maps;
 
-    public Medico(long id, String nome, String especialidade, String endereco, String telefone, String maps) {
+    public Medico(long id, String nome, String especialidade, String endereco, String horarios, String telefone, String maps) {
         this.id = id;
         this.nome = nome;
         this.especialidade = especialidade;
         this.endereco = endereco;
+        this.horarios = horarios;
         this.telefone = telefone;
         this.maps = maps;
     }
@@ -47,6 +49,14 @@ public class Medico implements Serializable {
         this.especialidade = especialidade;
     }
 
+    public String getHorarios(){
+        return horarios;
+    }
+
+    public void setHorarios(String horarios){
+        this.horarios = horarios;
+    }
+
     public String getEndereco() {
         return endereco;
     }
@@ -69,5 +79,9 @@ public class Medico implements Serializable {
 
     public void setMaps(String maps) {
         this.maps = maps;
+    }
+
+    public String getInformacoes(){
+        return this.getEspecialidade() + ", " + this.getHorarios();
     }
 }
