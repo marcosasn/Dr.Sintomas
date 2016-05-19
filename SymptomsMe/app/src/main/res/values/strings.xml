@@ -16,6 +16,13 @@
     <string name="sintomas">Sintomas:</string>
     <string name="prevencoes">Prevenções:</string>
 
+    ------------ Tela Medicos -------------
     <string name="title_activity_medicos">Médicos</string>
+
+    ------------ Tela Medico -------------
+    <string name="title_activity_medico">Médico</string>
+    <string name="informacoes_medico">Informações</string>
+    <string name="endereco_medico">Endereço</string>
+    <string name="button_mapa">Mapa de localização</string>
 
 </resources>

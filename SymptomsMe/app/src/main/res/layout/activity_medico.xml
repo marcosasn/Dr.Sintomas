@@ -47,91 +47,67 @@
             android:orientation="vertical"
             android:paddingLeft="10dp"
             android:paddingRight="10dp" >
+        
+            <TextView
+                android:id="@+id/textViewDoctorName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="30dp"
+                android:textSize="30sp"
+                android:text="Dr. Abidala Silva"
+                android:textColor="@color/text"
+                android:textAlignment="center"/>
 
             <TextView
-                android:id="@+id/textViewDescription"
+                android:id="@+id/textViewEndereco"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:autoLink="phone|email|web"
                 android:linksClickable="true"
                 android:paddingTop="30dp"
                 android:textSize="20sp"
-                android:text=""
-                android:textColor="@color/text" />
-
-            <TextView
-                android:id="@+id/textViewCausas"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autoLink="phone|email|web"
-                android:linksClickable="true"
-                android:paddingTop="30dp"
-                android:textSize="20sp"
-                android:text="@string/causas"
+                android:text="@string/endereco_medico"
                 android:textColor="@color/colorPrimary" />
 
             <TextView
-                android:id="@+id/textViewCausasT"
+                android:id="@+id/textViewEnderecoT"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:autoLink="phone|email|web"
                 android:linksClickable="true"
                 android:paddingTop="10dp"
                 android:textSize="20sp"
-                android:text=""
+                android:text="Rua Rita de cassia, nº 39, Prata Prédio São Rafael ,sala 307"
                 android:textColor="@color/text" />
 
-
             <TextView
-                android:id="@+id/textViewSintomas"
+                android:id="@+id/textViewInformacoes"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:autoLink="phone|email|web"
                 android:linksClickable="true"
                 android:paddingTop="30dp"
                 android:textSize="20sp"
-                android:text="@string/sintomas"
+                android:text="@string/informacoes_medico"
                 android:textColor="@color/colorPrimary" />
 
             <TextView
-                android:id="@+id/textViewSintomasL"
+                android:id="@+id/textViewInformacoesT"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:autoLink="phone|email|web"
                 android:linksClickable="true"
-                android:paddingTop="10dp"
-                android:textSize="20sp"
-                android:text=""
-                android:textColor="@color/text" />
-
-            <TextView
-                android:id="@+id/textViewPrevencoes"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autoLink="phone|email|web"
-                android:linksClickable="true"
-                android:paddingTop="30dp"
-                android:textSize="20sp"
-                android:text="@string/prevencoes"
-                android:textColor="@color/colorPrimary" />
-
-            <TextView
-                android:id="@+id/textViewPrevencoesL"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autoLink="phone|email|web"
-                android:linksClickable="true"
-                android:textSize="20sp"
                 android:paddingTop="10dp"
                 android:paddingBottom="30dp"
-                android:text=""
+                android:textSize="20sp"
+                android:text="Médico clinico geral especialista em doenças virais, atende de Segunda a Quinta nos horários de 9:00 ás 16:00."
                 android:textColor="@color/text" />
 
             <Button
+                android:id="@+id/button_mapa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/button_médicos"
-                android:id="@+id/button_medicos"
+                android:text="@string/button_mapa"
                 android:layout_gravity="center_horizontal"
                 android:background="@color/colorPrimary"
                 android:textColor="@color/white"

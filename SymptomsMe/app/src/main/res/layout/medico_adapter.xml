@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Dr. João Moura"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/text"
             android:textSize="30sp"
             android:gravity="center"
             android:id="@+id/nameDoctor" />

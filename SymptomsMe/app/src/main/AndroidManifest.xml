@@ -36,6 +36,12 @@
             android:icon="@mipmap/icon"
             android:parentActivityName=".activities.SintomaActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".activities.MedicoActivity"
+            android:label="@string/title_activity_medico"
+            android:icon="@mipmap/icon"
+            android:parentActivityName=".activities.SintomaActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
