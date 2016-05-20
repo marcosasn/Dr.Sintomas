@@ -55,18 +55,17 @@ public class DBSPopulater {
         mDb.addDoenca(hepatite);
         mDb.addDoenca(tuberculose);
 
-        String endereco = "Rua Rita de cassia nº 39, Prata, Prédio São Rafael, sala 307";
         String horarios = "Segunda-feira à Quinta-feira nos horários de 9:00 às 16:00.";
 
-        Medico medicoJoao = new Medico(1,"João Pedro", "Neuro", endereco, horarios, "9999-0000", "um link ai");
+        Medico medico1 = new Medico(1,"Maria Alzira de Oliveira", "Pneumologista", "Rodrigues Alves, 517 , Bela Vista - Campina Grande", horarios, "(83) 3321-4368", "https://www.google.com.br/maps/place/R.+Rodrigues+Alves,+517+-+Prata,+Campina+Grande+-+PB,+58400-550/@-7.2200938,-35.8994596,17z/data=!3m1!4b1!4m5!3m4!1s0x7ac1e36e1168c81:0x4da8b416a78f4c22!8m2!3d-7.2200991!4d-35.8972709");
 
-        Medico medicoJose = new Medico(1,"José", "Pneumologista", endereco, horarios, "9999-0000", "um link ai");
+        Medico medico2 = new Medico(1,"Sonisa Maria Guimaraes", "Pneumologista", "Praca do Trabalho , 19 , Sao Jose - Campina Grande", horarios, "(83) 3341-3510", "https://www.google.com.br/maps/place/Pra%C3%A7a+do+Trabalho,+19+-+S%C3%A3o+Jos%C3%A9,+Campina+Grande+-+PB,+58400-459/@-7.224647,-35.8943848,17z/data=!3m1!4b1!4m5!3m4!1s0x7ac1e47978b0f11:0x71a3d47ada7340e!8m2!3d-7.2246523!4d-35.8921961");
 
-        Medico medicoDouglas = new Medico(1,"Douglas", "Pneumologista", endereco, horarios, "9999-0000", "um link ai");
+        Medico medico3 = new Medico(1,"Andrezza Araujo de Oliveira", "Pneumologista", "Rua Rodrigo Alves, 1580 - Bodocongó - Campina Grande", horarios, "(83) 3333-3000", "https://www.google.com.br/maps/place/R.+Rodrigues+Alves,+Campina+Grande+-+PB/@-7.2196504,-35.9015655,17z/data=!3m1!4b1!4m5!3m4!1s0x7ac1e372aa958d9:0x9208d1aecb00bd9!8m2!3d-7.2196557!4d-35.8993768");
 
-        mDb.addMedico(medicoDouglas);
-        mDb.addMedico(medicoJoao);
-        mDb.addMedico(medicoJose);
+        mDb.addMedico(medico3);
+        mDb.addMedico(medico1);
+        mDb.addMedico(medico2);
 
         String[] sintomas1 = {"febre","dores de cabeça","cansaço"};
         String[] sintomas2 = {"enjoo"};

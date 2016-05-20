@@ -1,19 +1,15 @@
 package symptomsme.symptomsme.empsoft.projeto.symptomsme.activities;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.view.Window;
-import android.widget.ListView;
+import android.widget.Button;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
-
 import symptomsme.symptomsme.empsoft.projeto.symptomsme.R;
-import symptomsme.symptomsme.empsoft.projeto.symptomsme.adapters.MedicoAdapter;
-import symptomsme.symptomsme.empsoft.projeto.symptomsme.entities.Doenca;
 import symptomsme.symptomsme.empsoft.projeto.symptomsme.entities.Medico;
 
 public class MedicoActivity extends AppCompatActivity {
@@ -29,7 +25,7 @@ public class MedicoActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Medico medico = (Medico) getIntent().getExtras().getSerializable("medico");
+        final Medico medico = (Medico) getIntent().getExtras().getSerializable("medico");
 
         TextView tvNomeMedico = (TextView)findViewById(R.id.textViewDoctorName);
         TextView tvEnderecoT = (TextView)findViewById(R.id.textViewEnderecoT);
@@ -38,5 +34,16 @@ public class MedicoActivity extends AppCompatActivity {
         tvNomeMedico.setText(medico.getNome());
         tvEnderecoT.setText(medico.getEndereco() + ", " + medico.getTelefone());
         tvInformacoesT.setText(medico.getInformacoes());
+
+        Button verNoMapa = (Button) findViewById(R.id.button_mapa);
+
+        verNoMapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(medico.getMaps()));
+                startActivity(intent);
+            }
+        });
     }
 }

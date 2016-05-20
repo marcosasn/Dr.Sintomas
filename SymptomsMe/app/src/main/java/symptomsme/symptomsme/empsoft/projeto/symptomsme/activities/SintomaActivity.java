@@ -56,10 +56,14 @@ public class SintomaActivity extends AppCompatActivity {
                     String[] sintomas = (etSintomas.getText().toString()).split(",");
                     ArrayList<Doenca> doencas = mDb.getDoencasBySintomas(sintomas);
 
-                    Intent i = new Intent(getApplicationContext(), DoencasActivity.class);
-                    i.putExtra("doencas",doencas);
+                    if(doencas.size() == 0)
+                        Toast.makeText(getApplicationContext(),"Nenhuma doença encontrada",Toast.LENGTH_LONG).show();
+                    else{
+                        Intent i = new Intent(getApplicationContext(), DoencasActivity.class);
+                        i.putExtra("doencas",doencas);
 
-                    startActivity(i);
+                        startActivity(i);
+                    }
                 }
             }
         });

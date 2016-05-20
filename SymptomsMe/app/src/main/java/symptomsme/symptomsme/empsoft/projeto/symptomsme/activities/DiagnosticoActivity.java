@@ -10,6 +10,7 @@ package symptomsme.symptomsme.empsoft.projeto.symptomsme.activities;
         import android.view.Window;
         import android.widget.Button;
         import android.widget.TextView;
+        import android.widget.Toast;
 
         import java.util.ArrayList;
 
@@ -61,11 +62,15 @@ public class DiagnosticoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ArrayList<Medico> medicos = mDb.getMedicoByEspecialidade(especialidade);
+                if(medicos.size() == 0 ){
+                    Toast.makeText(getApplicationContext(), "Nenhum médico encontrado", Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Intent i = new Intent(getApplicationContext(), MedicosActivity.class);
+                    i.putExtra("medicos",medicos);
 
-                Intent i = new Intent(getApplicationContext(), MedicosActivity.class);
-                i.putExtra("medicos",medicos);
-
-                startActivity(i);
+                    startActivity(i);
+                }
             }
         });
 
