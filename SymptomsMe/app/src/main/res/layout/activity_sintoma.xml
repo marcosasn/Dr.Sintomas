@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".activities.SintomaActivity"
-    android:background="@color/colorAccent">
+    android:background="@drawable/background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,21 +14,10 @@
         android:gravity="center">
 
         <ImageView
-            android:layout_width="200dp"
-            android:layout_height="180dp"
-            android:src="@mipmap/dr_sintomas"
+            android:layout_width="166dp"
+            android:layout_height="149dp"
+            android:src="@drawable/dr_sintomas"
             android:contentDescription="@string/app_name"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="?attr/actionBarSize"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
-            android:paddingTop="20dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:weightSum="1">
 
             <TextView
                 android:layout_width="fill_parent"
@@ -39,16 +28,18 @@
                 android:id="@+id/textView2"
                 android:gravity="center"
                 android:textSize="20sp"
+                android:padding="10dp"
                 android:layout_gravity="center_horizontal" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="5dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:gravity="center">
 
                 <EditText
                     android:id="@+id/et_sintoma"
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
                     android:padding="10dp"
@@ -56,38 +47,16 @@
                     android:hint="@string/hint_symptom"
                     android:layout_toStartOf="@+id/bt_pesquisar" />
 
-                <ImageButton
-                    android:layout_width="50dp"
-                    android:layout_height="70dp"
+                <ImageView
+                    android:layout_width="29dp"
+                    android:layout_height="wrap_content"
                     android:id="@+id/bt_pesquisar"
                     android:layout_alignBottom="@+id/et_sintoma"
                     android:layout_alignParentEnd="true"
-                    android:src="@mipmap/lupa"
-                    android:background="@color/white"/>
+                    android:src="@drawable/lupa" />
 
-            </RelativeLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:text="@string/list_option_search_title"
-                android:textColor="@color/colorPrimary"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:layout_weight="2.08" />
-
-            <Spinner
-                android:id="@+id/spinner_doutores"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.33"
-                android:background="@color/white"/>
+            </LinearLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

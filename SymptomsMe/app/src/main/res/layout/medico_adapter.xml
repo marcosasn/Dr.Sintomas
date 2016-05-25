@@ -3,8 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorAccent">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -16,18 +15,19 @@
             android:layout_width="70dp"
             android:layout_height="50dp"
             android:id="@+id/imageView"
-            android:paddingRight="30dp"
-            android:src="@mipmap/medico"
+            android:paddingRight="15dp"
+            android:src="@drawable/medico"
             android:layout_gravity="center" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Dr. João Moura"
             android:textColor="@color/text"
-            android:textSize="30sp"
-            android:gravity="center"
+            android:textSize="20sp"
+            android:gravity="center_vertical|left"
             android:id="@+id/nameDoctor" />
     </LinearLayout>
+
 </LinearLayout>

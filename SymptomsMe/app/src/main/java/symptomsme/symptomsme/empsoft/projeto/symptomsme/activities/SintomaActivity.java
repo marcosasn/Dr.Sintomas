@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -41,7 +42,7 @@ public class SintomaActivity extends AppCompatActivity {
         }
         final EditText etSintomas = (EditText) findViewById(R.id.et_sintoma);
 
-        ImageButton btPesquisar = (ImageButton) findViewById(R.id.bt_pesquisar);
+        ImageView btPesquisar = (ImageView) findViewById(R.id.bt_pesquisar);
 
         btPesquisar.setOnClickListener(new View.OnClickListener() {
             @Override
