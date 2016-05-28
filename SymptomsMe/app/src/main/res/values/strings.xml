@@ -12,9 +12,9 @@
     <string name="title_activity_doencas">Doenças</string>
 
     ------------ Tela Diagnostico -------------
-    <string name="causas">Causas:</string>
-    <string name="sintomas">Sintomas:</string>
-    <string name="prevencoes">Prevenções:</string>
+    <string name="causas">Causas</string>
+    <string name="sintomas">Sintomas</string>
+    <string name="prevencoes">Prevenções</string>
 
     ------------ Tela Medicos -------------
     <string name="title_activity_medicos">Médicos</string>

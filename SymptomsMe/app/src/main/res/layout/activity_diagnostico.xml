@@ -41,11 +41,11 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp" >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
 
             <TextView
                 android:id="@+id/textViewDescription"
@@ -58,16 +58,30 @@
                 android:text=""
                 android:textColor="@color/text" />
 
-            <TextView
-                android:id="@+id/textViewCausas"
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autoLink="phone|email|web"
-                android:linksClickable="true"
-                android:paddingTop="30dp"
-                android:textSize="20sp"
-                android:text="@string/causas"
-                android:textColor="@color/colorPrimary" />
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/causa"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/textViewCausas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autoLink="phone|email|web"
+                    android:linksClickable="true"
+                    android:paddingTop="12dp"
+                    android:textSize="20sp"
+                    android:text="@string/causas"
+                    android:textColor="@color/text"/>
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textViewCausasT"
@@ -80,17 +94,30 @@
                 android:text=""
                 android:textColor="@color/text" />
 
-
-            <TextView
-                android:id="@+id/textViewSintomas"
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autoLink="phone|email|web"
-                android:linksClickable="true"
-                android:paddingTop="30dp"
-                android:textSize="20sp"
-                android:text="@string/sintomas"
-                android:textColor="@color/colorPrimary" />
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/sintoma"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/textViewSintomas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autoLink="phone|email|web"
+                    android:linksClickable="true"
+                    android:paddingTop="17dp"
+                    android:textSize="20sp"
+                    android:text="@string/sintomas"
+                    android:textColor="@color/text" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textViewSintomasL"
@@ -103,16 +130,31 @@
                 android:text=""
                 android:textColor="@color/text" />
 
-            <TextView
-                android:id="@+id/textViewPrevencoes"
+
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autoLink="phone|email|web"
-                android:linksClickable="true"
-                android:paddingTop="30dp"
-                android:textSize="20sp"
-                android:text="@string/prevencoes"
-                android:textColor="@color/colorPrimary" />
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/prevencao"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/textViewPrevencoes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autoLink="phone|email|web"
+                    android:linksClickable="true"
+                    android:paddingTop="10dp"
+                    android:textSize="20sp"
+                    android:text="@string/prevencoes"
+                    android:textColor="@color/text" />
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textViewPrevencoesL"
